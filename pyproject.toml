@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "markitdown-gui"
+version = "0.1.0"
+description = "A web-based GUI for Microsoft MarkItDown"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [
+    { name = "User" },
+]
+dependencies = [
+    "fastapi>=0.100.0",
+    "uvicorn[standard]>=0.23.0",
+    "python-multipart>=0.0.6",
+    "markitdown[all]>=0.1.0",
+]
+
+[project.scripts]
+markitdown-gui = "markitdown_gui.launcher:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+markitdown_gui = ["static/**/*"]

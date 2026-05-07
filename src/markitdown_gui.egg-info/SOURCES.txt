@@ -1,0 +1,9 @@
+README.md
+pyproject.toml
+src/markitdown_gui/__init__.py
+src/markitdown_gui.egg-info/PKG-INFO
+src/markitdown_gui.egg-info/SOURCES.txt
+src/markitdown_gui.egg-info/dependency_links.txt
+src/markitdown_gui.egg-info/entry_points.txt
+src/markitdown_gui.egg-info/requires.txt
+src/markitdown_gui.egg-info/top_level.txt

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MarkItDown GUI</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>MarkItDown GUI</h1>
+            <p class="subtitle">将 PDF、Word、Excel、PPT 等文件转换为 Markdown</p>
+        </header>
+
+        <main>
+            <div class="drop-zone" id="dropZone">
+                <div class="drop-zone-content">
+                    <svg class="upload-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                        <polyline points="17 8 12 3 7 8"/>
+                        <line x1="12" y1="3" x2="12" y2="15"/>
+                    </svg>
+                    <p class="drop-text">拖放文件到此处，或 <span class="click-here">点击选择</span></p>
+                    <p class="drop-hint">支持 PDF、DOCX、XLSX、PPTX、HTML、CSV、EPUB 等格式</p>
+                </div>
+                <input type="file" id="fileInput" multiple accept="*/*">
+            </div>
+
+            <div class="file-list" id="fileList"></div>
+
+            <div class="actions" id="actions" style="display: none;">
+                <button class="btn btn-primary" id="convertBtn">开始转换</button>
+                <button class="btn btn-secondary" id="clearBtn">清空列表</button>
+            </div>
+
+            <div class="results" id="results"></div>
+        </main>
+
+        <footer>
+            <p>Powered by <a href="https://github.com/microsoft/markitdown" target="_blank">Microsoft MarkItDown</a> | 所有文件仅在本地处理</p>
+        </footer>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/12.0.0/marked.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script src="/static/js/app.js"></script>
+</body>
+</html>
